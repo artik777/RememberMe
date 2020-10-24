@@ -1,33 +1,15 @@
 <template>
   <TheHeader title="RememberMe" />
-  <StoredResources :resources="storedResources" />
+  <TheResources />
 </template>
 
 <script>
-import StoredResources from './components/learning-resources/StoredResources';
 import TheHeader from './components/layouts/TheHeader';
+import TheResources from './components/learning-resources/TheResources';
 export default {
   components: {
-    StoredResources,
     TheHeader,
-  },
-  data() {
-    return {
-      storedResources: [
-        {
-          id: 'official-guide',
-          title: 'Official Guide',
-          description: 'The official Vue.js documentation',
-          link: 'https://vuejs.org',
-        },
-        {
-          id: 'google',
-          title: 'Google',
-          description: 'Learn to google...',
-          link: 'https://google.com',
-        },
-      ],
-    };
+    TheResources,
   },
 };
 </script>
